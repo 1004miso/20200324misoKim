@@ -29,7 +29,7 @@ public class Member {
 	public void setUserPwd(String userPwd) {
 		this.userPwd = userPwd;
 	}
-	public String get() {
+	public String getUserPwd() {
 		return userPwd;
 	}
 	public void setUserName(String userName) {
