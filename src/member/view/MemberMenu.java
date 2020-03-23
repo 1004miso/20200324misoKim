@@ -6,7 +6,7 @@ import member.controller.MemberManager;
 
 public class MemberMenu {
 	private Scanner sc =new Scanner(System.in);
-	MemberManager mm = new MemberManager();
+	private MemberManager mm = new MemberManager();
 
 	public MemberMenu() {}
 
