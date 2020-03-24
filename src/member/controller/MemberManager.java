@@ -156,17 +156,20 @@ public class MemberManager {
 			m[i].setUserPwd(null);
 			m[i].setUserName(null);
 			m[i].setAge(0);
-			m[i].setGender(' ');
+			m[i].setGender('\u0000');
 			m[i].setEmail(null);	
 		}
 		ctn = 0;
+		System.out.println("전체 회원 정보가 초기화 되었습니다.");
 	}
 
 	//반복문을 이용하여 ctn까지의 모든 인덱스의 객체 정보를 getter를 통해 출력시키는 메소드
 	public void printAllMember() {
+		
 		for(int i = 0; i < ctn; i++) {
 			System.out.println("id : " + m[i].getUserId()+", pwd : " + m[i].getUserPwd() + ", name : "+ m[i].getUserName()+", age : " + m[i].getAge()+", gender : " + m[i].getGender()+", email : " + m[i].getEmail());
 		}
+		
 	}
 	//출력시킬 Member객체를 전달받아, 해당 객체의 getter를 이용하여 전달받은 객체 정보를 출력함
 	public void printOne(Member m){
