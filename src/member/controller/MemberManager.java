@@ -135,10 +135,12 @@ public class MemberManager {
 	public void deleteOne(){
 		System.out.print("탈퇴할 회원의 아이디를 입력하세요 : ");
 		String userId = sc.next();
-		for(int i = 0; i < m.length ; i++) {
+		for(int i = 0; i < ctn ; i++) {
 			if(m[i].getUserId().equals(userId)) {
 				for(int j = i + 1; j < ctn; j++) {
+					Member temp = m[j-1];
 					m[j-1] = m[j];
+					m[j] = temp;
 				}
 				ctn--;
 			}else {
