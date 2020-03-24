@@ -14,8 +14,8 @@ public class MemberManager {
 
 
 	public void insertMember(){
-		
-		
+
+
 		System.out.print("userId : ");
 		String userId = sc.next();
 		System.out.print("userPwd : ");
@@ -44,7 +44,7 @@ public class MemberManager {
 				printOne(m[i]);
 				return;	
 			}
-			
+
 		}
 		System.out.println("검색한 회원 정보가 존재하지 않습니다.");
 		return;
@@ -59,7 +59,7 @@ public class MemberManager {
 				printOne(m[i]);
 				return;	
 			}
-			
+
 		}
 		System.out.println("검색한 회원 정보가 존재하지 않습니다.");
 		return;
@@ -74,7 +74,7 @@ public class MemberManager {
 				printOne(m[i]);
 				return;	
 			}
-			
+
 		}
 		System.out.println("검색한 회원 정보가 존재하지 않습니다.");
 		return;
@@ -165,15 +165,17 @@ public class MemberManager {
 
 	//반복문을 이용하여 ctn까지의 모든 인덱스의 객체 정보를 getter를 통해 출력시키는 메소드
 	public void printAllMember() {
-		
-		for(int i = 0; i < ctn; i++) {
-			System.out.println("id : " + m[i].getUserId()+", pwd : " + m[i].getUserPwd() + ", name : "+ m[i].getUserName()+", age : " + m[i].getAge()+", gender : " + m[i].getGender()+", email : " + m[i].getEmail());
+		if(ctn == 0) {
+			System.out.println("출력할 회원 정보가 없습니다.");
+		}else {
+			for(int i = 0; i < ctn; i++) {
+				System.out.println("id : " + m[i].getUserId()+", pwd : " + m[i].getUserPwd() + ", name : "+ m[i].getUserName()+", age : " + m[i].getAge()+", gender : " + m[i].getGender()+", email : " + m[i].getEmail());
+			}
 		}
-		
 	}
 	//출력시킬 Member객체를 전달받아, 해당 객체의 getter를 이용하여 전달받은 객체 정보를 출력함
 	public void printOne(Member m){
 		System.out.println("id : " + m.getUserId()+", pwd : " + m.getUserPwd() + ",name : " + m.getUserName() +", age : " + m.getAge() + ", gender : " + m.getGender() +", email : " + m.getEmail());
-		
+
 	}
 }
