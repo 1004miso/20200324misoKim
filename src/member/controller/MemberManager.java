@@ -140,7 +140,7 @@ public class MemberManager {
 				for(int j = i + 1; j < ctn; j++) {
 					Member temp = m[j-1];
 					m[j-1] = m[j];
-					
+					m[j] = temp;//뒤로 밀어주기!!
 				}
 				System.out.println("m["+ i + "] 회원 정보가 삭제되었습니다.");
 				ctn--;
