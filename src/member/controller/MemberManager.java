@@ -140,13 +140,14 @@ public class MemberManager {
 				for(int j = i + 1; j < ctn; j++) {
 					Member temp = m[j-1];
 					m[j-1] = m[j];
-					m[j] = temp;
+					
 				}
+				System.out.println("m["+ i + "] 회원 정보가 삭제되었습니다.");
 				ctn--;
-			}else {
-				System.out.println("삭제할 회원 정보가 존재하지 않습니다.");
+				return;
 			}
-		}
+		}System.out.println("삭제할 회원 정보가 존재하지 않습니다.");
+		return;
 
 	}
 
@@ -171,7 +172,7 @@ public class MemberManager {
 			System.out.println("출력할 회원 정보가 없습니다.");
 		}else {
 			for(int i = 0; i < ctn; i++) {
-				System.out.println("id : " + m[i].getUserId()+", pwd : " + m[i].getUserPwd() + ", name : "+ m[i].getUserName()+", age : " + m[i].getAge()+", gender : " + m[i].getGender()+", email : " + m[i].getEmail());
+				System.out.println("m.[" + i + "] 배열의 회원정보는 " + "id : " + m[i].getUserId()+", pwd : " + m[i].getUserPwd() + ", name : "+ m[i].getUserName()+", age : " + m[i].getAge()+", gender : " + m[i].getGender()+", email : " + m[i].getEmail());
 			}
 		}
 	}
